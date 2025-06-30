@@ -2,25 +2,24 @@
 
 DESCRIPTION:
 
-SINGITA TECHNOLOGY  is IT company situated in Rwanda under license of RDB legal business operations.
+SWIFT TECHNOLOGY  is IT company situated in Rwanda under license of RDB legal business operations.
 
 A transitory flow , The constant change of the world around us . . .
-It is the raison d'etre of Singita Technology.
-Singita philosophy of detail merges traditional craftsmanship
+It is the raison d'etre of Swift Technology.
+Swift philosophy of detail merges traditional craftsmanship
 Inspired by Fine Art and Engineering  
 
 
 
-companyname  : SINGITA TECHNOLOGY
-@author :  S.E  GERMAIN NTWALI BAHIZI
-© Copyright 2025 Singita Technology
+companyname  : Swift TECHNOLOGY
+© Copyright 2025 Swift Technology
 
 
-SINGITA Technology terms and condition for development 
+Swift Technology terms and condition for development 
 
 
  
-  Copyright (c) 2019  Germain Ntwali 
+  Copyright (c) 2019 
   
   Permission is hereby granted, free of charge, to any person obtaining a copy of
   this software and associated documentation files (the "singita Software"), to deal in
@@ -40,8 +39,7 @@ SINGITA Technology terms and condition for development
   CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
-contact : singitatechnology@gmail.com
-          germainntwali@icloud.com 
+contact : swifttechnologyrw@mail.com
           0787 998 290 
 
 
