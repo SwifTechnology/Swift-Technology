@@ -180,20 +180,27 @@
         }
     };
 
-    function login () {
-            const email = document.getElementById("mc-email").value;
-            const password = document.getElementById("password").value;
-            const validemail = 'germainntwali@icloud.com';
-            const validpassword = 'hurricane';
+    function login() {
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const validUsers = [
+            { email: 'germainntwali@icloud.com', password: 'hurricane' },
+            { email: 'songadanny07@gmail.com', password: '12345' },
+            { email: 'aggreyallen250@gmail.com', password: '12345' }
+        ];
+        const userFound = validUsers.some(user => user.email === email && user.password === password);
 
-            if (email === validemail && password === validpassword) {
-                window.location.href = 'swiftproducts/demo.html';
-            
-            } else {
-                alert (' Error ! user not found.\n contact swifttechnologyrw@gmail.com');
-            } return false;
+        if (userFound) {
+            window.location.href = 'swiftproducts/demo.html';
+        } else {
+            alert(' Error ! user not found.\n contact swifttechnologyrw@gmail.com');
         }
+
+        return false;
+    }
     document.getElementById('mc-form').onsubmit = login;
+
+  
 
     (function ssInit() {
 
