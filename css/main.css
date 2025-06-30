@@ -2299,14 +2299,14 @@ html.no-csstransitions .intro-content__bottom {
 .s-info::before {
   display: block;
   content: "";
-  width: 55%;
-  height: 65%;
+  width: 35%;
+  height: 45%;
   background-color: #ffffff;
   opacity: 0.3;
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: contain;
-  background-image: url(../images/amr24.png);
+  background-image: url(../images/WhatsApp\ Image\ 2025-06-30\ at\ 03.28.10_7abcd575.jpg);
   position: absolute;
   right: 50px;
   bottom: 0;
@@ -2674,4 +2674,6 @@ html.no-csstransitions .intro-content__bottom {
   }
 
 }
+
+
 
