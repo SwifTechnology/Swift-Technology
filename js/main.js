@@ -180,21 +180,9 @@
         }
     };
 
-    function login () {
-            const email = document.getElementById("mc-email").value;
-            const password = document.getElementById("password").value;
-            const validemail = 'germainntwali@icloud.com';
-            const validpassword = 'hurricane';
 
-            if (email === validemail && password === validpassword) {
-                window.location.href = 'swiftproducts/demo.html';
-            
-            } else {
-                alert (' Error ! user not found.\n contact swifttechnologyrw@gmail.com');
-            } return false;
-        }
-    document.getElementById('mc-form').onsubmit = login;
 
+    
     (function ssInit() {
 
         ssPreloader();
@@ -210,4 +198,22 @@
 
     })();
 
+    const validCredentials = [
+        { email: 'germainntwali@icloud.com', password: 'hurricane'},
+        { email: 'aggreyallen250@gmail.com' , password: '12345'},
+        { email: 'songadanny07@gmail.com' , password: '12345'},
+        { email: 'swift' , password : '12345'},   
+    ];
+    document.getElementById('mc-form').onsubmit = function(event) {
+        event.preventDefault();
+        const email =  document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const validCredential = validCredentials.find( Cred => Cred.email === email && Cred.password === password);
+        if (validCredential) {
+            window.location.href = 'swiftproducts/demo.html';
+        } else {
+            alert(' Error ! user not found.\n contact swifttechnologyrw@gmail.com');
+        } 
+        return false;
+    };
 })(jQuery);
