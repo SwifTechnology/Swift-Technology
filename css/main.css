@@ -805,6 +805,11 @@ select:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
 }
 
+
+
+
+
+
 .btn,
 button,
 input[type="submit"],
@@ -900,8 +905,8 @@ button.btn--large {
 .btn--stroke,
 button.btn--stroke {
   background: transparent !important;
-  border: 0.2rem solid #000000;
-  color: #000000;
+  border: 0.1rem solid white;
+  color: white;
 }
 
 .btn--stroke:hover,
@@ -1303,7 +1308,7 @@ input::-moz-focus-inner {
 }
 .header-logo h1 {
   font-family:"Gothic A1", sans-serif;
-  font-weight: bolder;
+  font-weight: 800;
   font-size: 12px;
   color: #ffffff;
   margin-top: 0;
@@ -2277,7 +2282,7 @@ html.no-csstransitions .intro-content__bottom {
 
 .s-info .vert-line {
   width: 1.5rem;
-  height: 20rem;
+  height: 10rem;
   position: absolute;
   top: 0;
   right: 8rem;
@@ -2288,7 +2293,7 @@ html.no-csstransitions .intro-content__bottom {
   display: block;
   height: inherit;
   width: 1px;
-  background-color: #000f3d;
+  background-color: rgb(167, 162, 162);
   position: absolute;
   left: 50%;
   top: 0;
@@ -2296,7 +2301,7 @@ html.no-csstransitions .intro-content__bottom {
 
 /*-----add some background ----*/
 
-.s-info::before {
+/*--.s-info::before {
   display: block;
   content: "";
   width: 55%;
@@ -2306,11 +2311,11 @@ html.no-csstransitions .intro-content__bottom {
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: contain;
-  background-image: url(../images/swift.png);
+  background-image: url();
   position: absolute;
   right: 50px;
   bottom: 0;
-}
+}--*/
 
 .s-info h1,
 .s-info h4 {
@@ -2328,9 +2333,9 @@ html.no-csstransitions .intro-content__bottom {
 .s-info h1::after {
   display: block;
   content: "";
-  width: 8rem;
-  height: 3px;
-  background-color: #011657;
+  width: 10rem;
+  height: 0.5px;
+  background-color: white;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -2357,17 +2362,17 @@ html.no-csstransitions .intro-content__bottom {
   position: relative;
 }
 
-.tab-nav__list li {
+/*--.tab-nav__list li {
   -webkit-flex-shrink: 0;
   -ms-flex-shrink: 0;
   flex-shrink: 0;
   padding: 0;
-  border-bottom: 1px solid #efefef;
-}
+  border-bottom: 1px solid black;
+}--*/
 
 .tab-nav__list a {
   display: block;
-  color: rgba(0, 0, 0, 0.5);
+  color: white;
   padding: 0 3.2rem;
   position: relative;
   font-family:  "Gothic A1", sans-serif;
@@ -2379,13 +2384,13 @@ html.no-csstransitions .intro-content__bottom {
 .tab-nav__list a:hover,
 .tab-nav__list a:focus,
 .tab-nav__list a:active {
-  color: #000000;
+  color: white;
   
 }
 
 .tab-nav__list .active a {
-  color: #000000;
-  background-color: #efefef;
+  color: white;
+  background-color: black;
   border-radius: 5px 5px 0 0;
   position: relative;
 }
