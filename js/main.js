@@ -3,33 +3,22 @@
  * Swift Technology main.js
  */
 (function($) {
-
     "use strict";
-    
     const cfg = {
                 scrollDuration : 800, // smoothscroll duration
                 mailChimpURL   : 'https://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e6957d85dc' // mailchimp url
                 };
     const $WIN = $(window);
-
     const doc = document.documentElement;
     doc.setAttribute('data-useragent', navigator.userAgent);
     const ssPreloader = function() {
-
         $("html").addClass('ss-preload');
-
         $WIN.on('load', function() {
-
-           
             $("#loader").fadeOut("slow", function() {
-              
                 $("#preloader").delay(300).fadeOut("slow");
             }); 
-            
-           
             $("html").removeClass('ss-preload');
             $("html").addClass('ss-loaded');
-
         });
     };
     const ssPrettyPrint = function() {
@@ -44,15 +33,12 @@
             arrows: false,
             dots: false,
             autoplay: true,
-            autoplaySpeed: 3000,
+            autoplaySpeed: 1000,
             fade: true,
             speed: 3000
         });
     };
-
-
     const ssModal = function() {
-
         const modal = document.querySelector(".modal");
         const trigger = document.querySelector(".modal-trigger");
         const closeButton = document.querySelector(".modal__close");
@@ -70,34 +56,22 @@
                 modal.classList.remove("show-modal");
             }
         }
-
         trigger.addEventListener("click", toggleModal);
         closeButton.addEventListener("click", toggleModal);
         window.addEventListener("click", windowOnClick);
         window.addEventListener("keyup", pressEsc);
-
     };
-
-
     const ssFinalCountdown = function() {
-
-        const finalDate = '2022/04/07';
-
+        const finalDate = '2070/04/07';
         $('.counter').countdown(finalDate)
         .on('update.countdown finish.countdown', function(event) {
-
             const str = '<div class=\"counter__time days\">%D&nbsp;<span>D</span></div>' +
                         '<div class=\"counter__time hours\">%H&nbsp;<span>H</span></div>' +
                         '<div class=\"counter__time minutes\">%M&nbsp;<span>M</span></div>' +
-                        '<div class=\"counter__time seconds\">%S&nbsp;<span>S</span></div>';
-                    
+                        '<div class=\"counter__time seconds\">%S&nbsp;<span>S</span></div>';          
             $(this).html(event.strftime(str));
-
         });
     };
-
-
- 
     const ssTabs = function() {
 
         const $tabNavListItems = $("ul.tab-nav__list li");
@@ -141,7 +115,6 @@
         });
 
     };
-
     const ssBackToTop = function() {
         
         const pxShow      = 500;
@@ -157,18 +130,11 @@
             }
         });
     };
-
- 
-
-
-    const ssAjaxChimp = function() {
-            
+    const ssAjaxChimp = function() { 
         $('#mc-form').ajaxChimp({
             language: 'es',
             url: cfg.mailChimpURL
         });
-
-
         $.ajaxChimp.translations.es = {
             'submit': 'Submitting...',
             0: '<i class="fas fa-check"></i> We have sent you a confirmation email',
@@ -179,12 +145,7 @@
             5: '<i class="fas fa-exclamation-triangle"></i> E-mail address is not valid.'
         }
     };
-
-
-
-    
     (function ssInit() {
-
         ssPreloader();
         ssPrettyPrint();
         ssSlickSlider();
@@ -195,9 +156,7 @@
         ssSmoothScroll();
         ssBackToTop();
         ssAjaxChimp();
-
     })();
-
     const validCredentials = [
         { email: 'germainntwali@icloud.com', password: 'hurricane'},
         { email: 'aggreyallen250@gmail.com' , password: '12345'},
