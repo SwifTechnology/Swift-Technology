@@ -2,7 +2,7 @@
 
 DESCRIPTION:
 
-SWIFTKNOLOGY Inc, an IT company situated in Rwanda under license from RDB, conducts legal business operations.
+SWIFTKNOLOGY Inc, an IT company situated in Rwanda under license from RDB legal business operations.
 
 A transitory flow , the constant change of the world around us . . .
 It is the raison d'etre of Swift Technology.
