@@ -1,6 +1,6 @@
 /**
- * @author Germain Ntwali
- * Swift Technology main.js
+ * @author Germain Ntwali S.E
+ * Swiftknology Inc main.js
  */
 (function($) {
     "use strict";
