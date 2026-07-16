@@ -2,20 +2,20 @@
 
 DESCRIPTION:
 
-SWIFT TECHNOLOGY Inc  is IT company situated in Rwanda under license of RDB legal business operations.
+SWIFTKNOLOGY Inc, IT company situated in Rwanda under license of RDB legal business operations.
 
 A transitory flow , The constant change of the world around us . . .
 It is the raison d'etre of Swift Technology.
-Swift philosophy of detail merges traditional craftsmanship
+
 Inspired by Fine Art and Engineering  
 
 
  
-companyname  : SWIFT TECHNOLOGY INC
-© Copyright 2026 Swift Technology Inc
+companyname: SWIFTKNOLOGY INC
+© Copyright 2026 Swiftknology Inc
 
  
-  Copyright (c) 2020 
+  Copyright (c) 2020-2026
   
   Permission is hereby granted, free of charge, to any person obtaining a copy of
   this software and associated documentation files (the "Swift Software"), to deal in
@@ -35,4 +35,4 @@ companyname  : SWIFT TECHNOLOGY INC
   CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
-contact : swifttechnologyrw@gmail.com
+contact: swifttechnologyrw@gmail.com
