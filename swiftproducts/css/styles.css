@@ -3737,7 +3737,7 @@ img.u-pull-left {
 .modal-popup form label {
     color: white; 
     padding: 12px;
-    font-family: ;
+    
   }
   
 .modal-popup form label i {
@@ -4289,3 +4289,104 @@ img.u-pull-left {
     }
 }
 
+
+
+
+.confirmation-popup {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.confirmation-popup.active {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+}
+
+.popup-content {
+    width: 100%;
+    max-width: 450px;
+    background: #111;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 7px;
+    padding: 40px 30px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6);
+    transform: scale(0.8);
+    animation: popupScale 0.35s ease forwards;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.success-icon img {
+    margin-top: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.popup-content h3 {
+    margin-bottom: 12px;
+    color: white;
+}
+
+.popup-content p {
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.popup-close {
+    border: none;
+    background: white;
+    color: black;
+    padding: 13px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.popup-close:hover {
+    transform: translateY(-2px);
+    background: #ddd;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popupScale {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
