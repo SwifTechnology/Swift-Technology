@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" >
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SWIFTKNOLOGY INC</title>
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/singita1.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/singita1.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/singita1.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    
+
+</head>
+<body id="top" style="background-color: black;">
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+    <div id="page" class="s-pagewrap">
+        <header class="s-header">
+
+            <div class="row s-header__inner">
+
+                <div class="s-header__block">
+                    <div class="s-header__logo">
+                        <a href="index.html">
+                           SWIFTKNOLOGY INC
+                        </a>
+                    </div>
+
+                    <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+                </div>
+                <nav class="s-header__nav">
+    
+
+                    <ul class="s-header__social">
+                        <li><a href="https://github.com/SINGITATECHNOLOGY"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+                        <li><a href="https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-virtual-desktop-infrastructure-vdi"><i class="fab fa-windows" aria-hidden="true"></i></a></li>
+                      
+                        <li><a href="mailto:swifttechnologyrw@gmail.com"><i class="fab fa-google" aria-hidden="true"></i></a></li>
+                       
+                    </ul> 
+                </nav>
+
+
+
+                
+
+            </div>
+
+        </header>
+
+        <div class="row" style="margin-top: 2cm;">
+
+            <div class="column lg-6 tab-12">
+
+                <h6 class="u-add-bottom" style="color: white;">Mortgage Protection Plan</h6>
+
+        <form id="mortgageForm">
+
+    <div>
+        <label for="userEmail" style="color: white; font-family: 'Courier New', Courier, monospace; font-weight: 500;">
+            User Email
+        </label>
+        <input class="u-fullwidth" type="email" placeholder="test@mailbox.com" id="userEmail" required>
+    </div>
+
+    <div>
+        <label for="fullNames" style="color: white; font-family: 'Courier New', Courier, monospace; font-weight: 500;">
+            Full Names
+        </label>
+        <input class="u-fullwidth" type="text" placeholder="Mr / Miss / Mrs" id="fullNames" required>
+    </div>
+
+    <div>
+        <label for="company" style="color: white; font-family: 'Courier New', Courier, monospace; font-weight: 500;">
+            Company
+        </label>
+
+        <div class="ss-custom-select">
+            <select class="u-fullwidth" id="company" required>
+                <option value="">RETURN</option>
+                <option value="Government">Government</option>
+                <option value="Private Equity">Private Equity</option>
+                <option value="NGO">NGO</option>
+                <option value="Business">Business</option>
+            </select>
+        </div>
+    </div>
+
+    <div>
+        <label for="applicableForm" style="color: white; font-family: 'Courier New', Courier, monospace; font-weight: 500;">
+            Applicable Form
+        </label>
+
+        <div class="ss-custom-select">
+            <select class="u-fullwidth" id="applicableForm" required>
+                <option value="">RETURN</option>
+                <option value="MPP">MPP</option>
+                <option value="Risk Calculator">Risk Calculator</option>
+            </select>
+        </div>
+    </div>
+
+    <input class="u-fullwidth" type="submit" value="SUBMIT">
+
+</form>
+
+            </div>
+            <br>
+            <div class="column lg-6 tab-12">
+
+                <h6 style="color: white; ">by SWIFTKNOLOGY Inc </h6>
+                 
+                <br>
+                <h6><a href="sustainability.html" style="text-transform: capitalize; color: white;">Reduce your 
+                    interest costs and become debt free sooner. It’s an all in one mortgage that
+                     lets you simplify your banking by combining your mortgage with your
+                      bank accounts, short term savings, income, and other debts.</a></h6>
+
+
+                <img src="../images/mpp.png" alt="mpp picture here">
+                        
+               
+            
+            </div>
+
+        </div> <!-- end row -->
+
+        <div class="foot">
+            <p  style="font-weight: 550;"> © Copyright 2026  Swiftknology Inc</p>
+         </div>
+
+
+
+         <div class="confirmation-popup" id="confirmationPopup">
+
+    <div class="popup-content">
+
+        <div class="success-icon">
+            <img src="images/singita1.png" >
+        </div>
+
+        <h3>submitted successfully!</h3>
+
+        <p id="confirmationMessage">
+            Your request has been successfully submitted.
+        </p>
+
+        <button class="popup-close" onclick="closeConfirmation()">
+            Continue
+        </button>
+
+    </div>
+
+</div>
+
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+    const mortgageForm = document.getElementById("mortgageForm");
+    const confirmationPopup = document.getElementById("confirmationPopup");
+    const confirmationMessage = document.getElementById("confirmationMessage");
+        mortgageForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    const email = document.getElementById("userEmail").value.trim();
+    const names = document.getElementById("fullNames").value.trim();
+    const company = document.getElementById("company").value;
+    const applicableForm = document.getElementById("applicableForm").value;
+    if (!email || !names || !company || !applicableForm) {
+        confirmationMessage.innerHTML =
+            "Please complete all required fields before submitting.";
+        confirmationPopup.classList.add("active");
+        return;
+    }
+    confirmationMessage.innerHTML =
+        "Thank you, <strong>" + names + "</strong>.<br><br>" +
+        "Your <strong>" + applicableForm + "</strong> request has been received " +
+        "from <strong>" + company + "</strong><br><br>";
+        
+    confirmationPopup.classList.add("active");
+    mortgageForm.reset();
+});
+function closeConfirmation() {
+    confirmationPopup.classList.remove("active");
+}
+confirmationPopup.addEventListener("click", function(event) {
+    if (event.target === confirmationPopup) {
+        closeConfirmation();
+    }
+});
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+        closeConfirmation();
+    }
+});
+</script>
+   
+</body>
+</html>
