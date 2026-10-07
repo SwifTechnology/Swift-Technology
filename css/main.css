@@ -2723,3 +2723,33 @@ html.no-csstransitions .intro-content__bottom {
     }
 }
 
+
+/* Fix contact tab content on mobile */
+@media screen and (max-width: 600px) {
+    #tab-contact h1 {
+        font-size: 18px !important;
+        line-height: 1.5 !important;
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+
+    #tab-contact h1 a {
+        word-break: break-word;
+        overflow-wrap: break-word;
+        display: inline-block;
+        max-width: 100%;
+    }
+
+    /* Also make the address wrap nicely */
+    #tab-contact .tab-content__item-bottom {
+        padding-right: 0;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    /* Reduce info section padding on mobile */
+    .s-info {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
