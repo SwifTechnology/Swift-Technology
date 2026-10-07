@@ -2723,33 +2723,50 @@ html.no-csstransitions .intro-content__bottom {
     }
 }
 
-
-/* Fix contact tab content on mobile */
+/* Fix contact tab content on mobile - v2 */
 @media screen and (max-width: 600px) {
-    #tab-contact h1 {
-        font-size: 18px !important;
-        line-height: 1.5 !important;
-        word-break: break-word;
-        overflow-wrap: break-word;
+
+    /* Force the whole contact area to respect the viewport */
+    .tab-content,
+    .tab-content__item,
+    .tab-content__item-bottom {
+        max-width: 100%;
+        overflow-x: hidden;
     }
 
+    /* The contact heading */
+    #tab-contact h1,
+    #tab-contact .tab-content__item-bottom h1 {
+        font-size: 15px !important;
+        line-height: 1.6 !important;
+        word-break: break-word !important;
+        overflow-wrap: anywhere !important;
+        hyphens: auto;
+        max-width: 100%;
+        display: block;
+    }
+
+    /* Links inside contact */
     #tab-contact h1 a {
-        word-break: break-word;
-        overflow-wrap: break-word;
-        display: inline-block;
+        display: inline;
+        word-break: break-word !important;
+        overflow-wrap: anywhere !important;
         max-width: 100%;
     }
 
-    /* Also make the address wrap nicely */
-    #tab-contact .tab-content__item-bottom {
-        padding-right: 0;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
+    /* Reduce padding on the info section */
+    .s-info .row,
+    .s-info .column {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        max-width: 100%;
     }
+}
 
-    /* Reduce info section padding on mobile */
-    .s-info {
-        padding-left: 20px;
-        padding-right: 20px;
+/* Extra small phones */
+@media screen and (max-width: 400px) {
+    #tab-contact h1,
+    #tab-contact .tab-content__item-bottom h1 {
+        font-size: 13px !important;
     }
 }
