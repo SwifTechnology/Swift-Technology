@@ -2677,96 +2677,136 @@ html.no-csstransitions .intro-content__bottom {
     transform: translate3d(50%, 0, 0);
   }
 
-}
-
-/* ==========================================================
-   MOBILE FIX: Navigation Tabs (ABOUT / PRODUCTS / CONTACT)
+}/* ==========================================================
+   MOBILE: Uniform fonts, readable size, no overflow
    ========================================================== */
 @media screen and (max-width: 600px) {
 
-    /* Allow the tab list to wrap to a new line instead of overflowing */
-    .tab-nav__list {
-        flex-wrap: wrap;
-        justify-content: center;
-        line-height: 4.4rem;
+    /* Allow proper wrapping everywhere in the info section */
+    .s-info,
+    .s-info .row,
+    .s-info .column,
+    .tab-content,
+    .tab-content__item,
+    .tab-content__item-header,
+    .tab-content__item-bottom {
+        max-width: 100% !important;
+        overflow-wrap: break-word !important;
+        word-wrap: break-word !important;
     }
 
-    /* Reduce padding so all 3 tabs fit on screen */
-    .tab-nav__list a {
-        padding: 0 1.4rem;
-        font-size: 10px;
-        letter-spacing: 2px;
+    /* All tab headings: same font, readable size */
+    #tab-about h1,
+    #tab-services h1,
+    #tab-contact h1,
+    .tab-content h1 {
+        font-family: "DM Serif Display", serif !important;
+        font-weight: 400 !important;
+        font-size: 22px !important;
+        line-height: 1.4 !important;
+        letter-spacing: 0 !important;
+        word-spacing: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 2rem !important;
+        padding-right: 0 !important;
+        overflow-wrap: break-word !important;
+        word-break: normal !important;
+        hyphens: auto;
     }
 
-    /* Fix tab-content spacing on mobile */
+    /* Paragraphs inside tabs (if any) */
+    .tab-content p {
+        font-family: "DM Serif Display", serif !important;
+        font-size: 20px !important;
+        line-height: 1.5 !important;
+    }
+
+    /* Links inherit the same font */
+    .tab-content h1 a,
+    .tab-content p a {
+        font-family: inherit !important;
+        font-size: inherit !important;
+        overflow-wrap: break-word !important;
+        word-break: break-word !important;
+    }
+
+    /* Long email/URL strings: break only if they can't fit */
+    .tab-content a[href*="mailto"],
+    .tab-content a[href*="google.com/maps"],
+    #tab-contact a {
+        word-break: break-word !important;
+        overflow-wrap: anywhere !important;
+    }
+
+    /* Remove leftover right padding from tab-content */
     .tab-content {
-        padding-right: 0;
-        margin-top: 4rem;
+        padding-right: 0 !important;
     }
 }
 
-/* For very small phones (Galaxy A55 is 360px wide) */
+/* Extra-small phones (Galaxy A55 at 360px) */
 @media screen and (max-width: 400px) {
 
-    .tab-nav__list a {
-        padding: 0 1rem;
-        font-size: 9px;
-        letter-spacing: 1.5px;
-    }
-
+    #tab-about h1,
+    #tab-services h1,
+    #tab-contact h1,
     .tab-content h1 {
-        font-size: 24px;
+        font-size: 20px !important;
     }
 
     .tab-content p {
-        font-size: 17px;
+        font-size: 18px !important;
     }
 }
 
-/* Fix contact tab content on mobile - v2 */
+
+/* ==========================================================
+   MOBILE: Fix truncated tab labels + remove horizontal scroll
+   ========================================================== */
 @media screen and (max-width: 600px) {
 
-    /* Force the whole contact area to respect the viewport */
-    .tab-content,
-    .tab-content__item,
-    .tab-content__item-bottom {
-        max-width: 100%;
-        overflow-x: hidden;
+    /* Remove the horizontal scroll behavior */
+    .tab-nav {
+        overflow-x: visible !important;
+        overflow-y: visible !important;
     }
 
-    /* The contact heading */
-    #tab-contact h1,
-    #tab-contact .tab-content__item-bottom h1 {
-        font-size: 15px !important;
-        line-height: 1.6 !important;
-        word-break: break-word !important;
-        overflow-wrap: anywhere !important;
-        hyphens: auto;
-        max-width: 100%;
-        display: block;
+    /* Let tabs wrap cleanly */
+    .tab-nav__list {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        overflow: visible !important;
+        line-height: 4rem !important;
     }
 
-    /* Links inside contact */
-    #tab-contact h1 a {
-        display: inline;
-        word-break: break-word !important;
-        overflow-wrap: anywhere !important;
-        max-width: 100%;
+    /* Give each tab enough room so text isn't clipped */
+    .tab-nav__list li {
+        flex-shrink: 0;
+        display: inline-block;
+        padding: 0;
+        margin: 0 4px;
     }
 
-    /* Reduce padding on the info section */
-    .s-info .row,
-    .s-info .column {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        max-width: 100%;
+    /* Reduce padding/spacing so full word fits */
+    .tab-nav__list a {
+        padding: 0 1.2rem !important;
+        font-size: 10px !important;
+        letter-spacing: 1.5px !important;
+        white-space: nowrap !important;
+        display: inline-block;
+    }
+
+    /* Make sure no hidden overflow cuts the last letter */
+    .tab-nav__list li:last-child a {
+        padding-right: 1.2rem !important;
     }
 }
 
 /* Extra small phones */
 @media screen and (max-width: 400px) {
-    #tab-contact h1,
-    #tab-contact .tab-content__item-bottom h1 {
-        font-size: 13px !important;
+    .tab-nav__list a {
+        padding: 0 0.9rem !important;
+        font-size: 9px !important;
+        letter-spacing: 1px !important;
     }
 }
